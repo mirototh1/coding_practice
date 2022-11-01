@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CD</label>
+    <protected>false</protected>
+    <values>
+        <field>Alpha2Code__c</field>
+        <value xsi:type="xsd:string">CD</value>
+    </values>
+    <values>
+        <field>Alpha3Code__c</field>
+        <value xsi:type="xsd:string">COD</value>
+    </values>
+    <values>
+        <field>Capital__c</field>
+        <value xsi:type="xsd:string">Kinshasa</value>
+    </values>
+    <values>
+        <field>HashCode__c</field>
+        <value xsi:type="xsd:double">-3.50990712E8</value>
+    </values>
+    <values>
+        <field>Name__c</field>
+        <value xsi:type="xsd:string">Congo (Democratic Republic of the)</value>
+    </values>
+    <values>
+        <field>Region__c</field>
+        <value xsi:type="xsd:string">Africa</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_change_restrictions</fullName>
+    <active>true</active>
+    <description>This rules restricts changes of the Country, LeadSource  and NumberOfEmployees fields for all profiles. Exceptions are System Administrator, which can leave the NumberOfEmployees and Country empty. Contract Manager can leave empty the NumberOfEmployees.</description>
+    <errorConditionFormula>AND(
+ ISCHANGED( OwnerId ), 
+ OR(
+  ISBLANK( TEXT(LeadSource)),
+  AND(
+   ISBLANK( Country ),
+   NOT( $Profile.Name = &quot;System Administrator&quot; )
+  ),
+  AND(
+   ISBLANK( NumberOfEmployees ),
+   NOT( $Profile.Name = &quot;System Administrator&quot; ),
+   NOT( $Profile.Name = &quot;Contract Manager&quot; )
+  )
+ )
+)</errorConditionFormula>
+    <errorMessage>Fields Country, NumberOfEmployees and LeadSource must not be empty.</errorMessage>
+</ValidationRule>
